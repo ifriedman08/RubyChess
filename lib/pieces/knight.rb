@@ -11,6 +11,9 @@ class Knight < SteppingPiece
     [-1, -2]
   ]
 
+  # def initialize(color)
+  #   @color = color
+  # end
 
   def moves
     moves_from_steps(KNIGHT_STEPS)

@@ -60,7 +60,36 @@ class ChessGame
     move = current_player.get_move
     execute_move(move)
     display.render
+    promote(move)
     switch_turn
+  end
+
+  def promote(move)
+    target_row = self.current_color == :blue ? 0 : 7
+    end_row = move[1][0]
+    if self.board[move[1]].class == Pawn && move[1][0] == target_row && self.current_player.class == Human
+      puts "The pawn can be promoted! What new piece would you like?"
+      puts "1 - Queen"
+      puts "2 - Rook"
+      puts "3 - Knight"
+      puts "4 - Bishop"
+      option = gets.chomp
+    elsif self.board[move[1]].class == Pawn && move[1][0] == target_row && self.current_player.class == Computer
+      option = 1
+    else
+    end
+
+    case option
+    when 1
+      self.board[move[1]] = Queen.new(move[1], self.board, current_color)
+    when 2
+      self.board[move[1]] = Rook.new(move[1], self.board, current_color)
+    when 3
+      self.board[move[1]] = Knight.new(move[1], self.board, current_color)
+    when 4
+      self.board[move[1]] = Bishop.new(move[1], self.board, current_color)
+    else
+    end
   end
 
   def execute_move(move)

@@ -1,4 +1,4 @@
-# aa-w2d2-3-RubyChess
+# RubyChess
 with Jacy
 
 The clasic is here to play.

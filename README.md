@@ -6,6 +6,7 @@ The clasic is here to play.
 Simply clone the repo, then run commands:
 
 <code>$ cd RubyChess </code>
+<br>
 <code>$ ruby lib/game.rb </code>
 
 - Enter the mode you wish to play

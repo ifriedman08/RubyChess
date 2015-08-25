@@ -15,7 +15,8 @@ class Display
   def game_over_message
     render
     if board.checkmate?(game.current_color)
-      puts "Checkmate, #{board.opponent_color(current_color)} wins."
+      debugger
+      puts "Checkmate, #{board.opponent_color(game.current_color)} wins."
     else
       puts "It's a stalemate!"
     end

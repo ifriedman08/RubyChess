@@ -59,6 +59,7 @@ class ChessGame
   def turn
     move = current_player.get_move
     execute_move(move)
+    display.render
     switch_turn
   end
 

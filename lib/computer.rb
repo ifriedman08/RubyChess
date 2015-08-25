@@ -3,19 +3,20 @@ class Computer < Player
     sleep(1)
     options = game.board.all_valid_moves(color)
     attackables = options.select {|move| game.board.attackable?(move[1], color)}
-    # pieces = game.board.grid.flatten.select {|square| square.occupied?  }
-    # checkables = pieces.select {|piece| piece.checkable_moves}
+    pieces = game.board.grid.flatten.select {|square| square.occupied? && square.color == color }
+    checkables = pieces.select {|piece| piece.checkable_moves.length > 0}
+    uncheckables = pieces.select {|piece| piece.uncheck_moves.length > 0}
     display.render
 
-    # if checkables.length > 0
-    #   checkables.sample
-    # els
-
-    if attackables.length > 0
-      # puts "The AI is moving!"
+    if game.board.in_check?(color) && uncheckables.length > 0
+      piece = uncheckables.sample
+      [piece.pos, piece.uncheck_moves.sample]
+    elsif checkables.length > 0
+      piece = checkables.sample
+      [piece.pos, piece.checkable_moves.sample]
+    elsif attackables.length > 0
       attackables.sample
     else
-      # puts "The AI is moving!"
       options.sample
     end
   end

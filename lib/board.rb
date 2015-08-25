@@ -63,7 +63,6 @@ class Board
   end
 
   def execute_move(move)
-    # byebug
     start, finish = move
     taken_pieces << self[finish] if occupied?(finish)
     self[finish] = self[start].move(finish)
@@ -120,7 +119,6 @@ class Board
   #   compacted
   # end
 
-
   def stalemate?(color)
     !in_check?(color) && no_valid_moves(color)
   end
@@ -147,7 +145,7 @@ class Board
       piece.class == King && piece.color == color
     end
 
-    king.pos
+    king.nil? ? nil : king.pos
   end
 
   def opponent_pieces(color)

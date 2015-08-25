@@ -50,12 +50,19 @@ class Piece
     end
   end
 
-  # def checkable_moves
-  #   moves.reject do |move|
-  #     duped_board = board.deep_dup_board
-  #     duped_board.execute_move([pos, move])
-  #     duped_board.in_check?(opponent_color)
-  #   end
-  # end
+  def checkable_moves
+    valid_moves.select do |move|
+      duped_board = board.deep_dup_board
+      duped_board.execute_move([pos, move])
+      duped_board.in_check?(opponent_color)
+    end
+  end
 
+  def uncheck_moves
+    valid_moves.select do |move|
+      duped_board = board.deep_dup_board
+      duped_board.execute_move([pos, move])
+      !duped_board.in_check?(color)
+    end
+  end
 end

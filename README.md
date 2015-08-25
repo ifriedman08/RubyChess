@@ -1,6 +1,6 @@
 # RubyChess
 
-The clasic is here to play.
+The classic game is here to play, on a simple, clean, terminal GUI.
 
 Simply clone the repo, then run commands:
 

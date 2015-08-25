@@ -1,5 +1,4 @@
 # RubyChess
-with Jacy
 
 The clasic is here to play.
 

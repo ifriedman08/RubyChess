@@ -1,5 +1,7 @@
 require_relative 'display'
 require_relative 'player'
+require_relative 'human'
+require_relative 'computer'
 require 'yaml'
 
 

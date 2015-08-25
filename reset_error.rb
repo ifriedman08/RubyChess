@@ -1,0 +1,2 @@
+class ResetError < StandardError
+end

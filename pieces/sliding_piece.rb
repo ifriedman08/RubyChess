@@ -24,35 +24,4 @@ class SlidingPiece < Piece
 
     moves
   end
-
-end
-
-class Rook < SlidingPiece
-  def moves
-    hor_vert_moves
-  end
-
-  def to_s
-    " ♜ ".colorize(color)
-  end
-end
-
-class Bishop < SlidingPiece
-  def moves
-    diagonal_moves
-  end
-
-  def to_s
-    " ♝ ".colorize(color)
-  end
-end
-
-class Queen < SlidingPiece
-  def moves
-    diagonal_moves + hor_vert_moves
-  end
-
-  def to_s
-    " ♛ ".colorize(color)
-  end
 end

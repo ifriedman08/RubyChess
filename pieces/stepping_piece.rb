@@ -9,36 +9,3 @@ class SteppingPiece < Piece
     resulting_moves
   end
 end
-
-class Knight < SteppingPiece
-
-  KNIGHT_STEPS = [
-    [2, 1],
-    [-2, 1],
-    [1, 2],
-    [1, -2],
-    [2, -1],
-    [-2, -1],
-    [-1, 2],
-    [-1, -2]
-  ]
-
-
-  def moves
-    moves_from_steps(KNIGHT_STEPS)
-  end
-
-  def to_s
-    " ♞ ".colorize(color)
-  end
-end
-
-class King < SteppingPiece
-  def moves
-    moves_from_steps(HOR_VERT_STEPS) + moves_from_steps(DIAGONAL_STEPS)
-  end
-
-  def to_s
-    " ♚ ".colorize(color)
-  end
-end

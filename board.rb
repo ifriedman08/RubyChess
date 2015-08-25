@@ -1,7 +1,6 @@
 require_relative 'piece'
 require_relative 'pieces/piece_subclasses'
-require_relative 'emptyspace'
-
+require_relative 'empty_space'
 
 class Board
   attr_accessor :grid, :taken_pieces
@@ -191,5 +190,4 @@ class Board
     return deep_dup_array(array, new_board) if array.none? {|el| el.is_a?(Array) }
     array.map {|el| deep_dup_grid(el, new_board)}
   end
-
 end

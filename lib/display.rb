@@ -15,7 +15,6 @@ class Display
   def game_over_message
     render
     if board.checkmate?(game.current_color)
-      debugger
       puts "Checkmate, #{board.opponent_color(game.current_color)} wins."
     else
       puts "It's a stalemate!"
@@ -103,7 +102,7 @@ class Display
       command = show_single_key
 
       if command == :"\"d\""
-        debugger
+        # debugger
       end
 
       if command == :return

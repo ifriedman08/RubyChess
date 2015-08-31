@@ -16,13 +16,14 @@ Enjoy!
 
 # Screenshots
 
+
 ![screen1]
 ![screen2]
 ![screen3]
 ![screen4]
 
 
-[screen]: screenshots/screen1.png
-[screen]: screenshots/screen2.png
-[screen]: screenshots/screen3.png
-[screen]: screenshots/screen4.png
+[screen1]: screenshots/screen1.png
+[screen2]: screenshots/screen2.png
+[screen3]: screenshots/screen3.png
+[screen4]: screenshots/screen4.png

@@ -13,3 +13,16 @@ Simply clone the repo, then run commands:
 - Use ENTER to pick and place pieces
 
 Enjoy!
+
+# Screenshots
+
+![screen1]
+![screen2]
+![screen3]
+![screen4]
+
+
+[screen]: screenshots/screen1.png
+[screen]: screenshots/screen2.png
+[screen]: screenshots/screen3.png
+[screen]: screenshots/screen4.png

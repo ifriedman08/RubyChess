@@ -14,12 +14,6 @@ Simply clone the repo, then run commands:
 
 Enjoy!
 
-# Screenshots
-![screen1]
-![screen2]
-![screen3]
-![screen4]
-
 # Human vs AI
 ![gif1]
 
